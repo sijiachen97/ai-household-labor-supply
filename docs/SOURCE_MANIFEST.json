@@ -1,0 +1,56 @@
+[
+  {
+    "file": "research/code/01_merge_ai_exposure.R",
+    "original_relative_path": "code/01_merge_ai_exposure.R",
+    "source_sha256": "1caa3076b39bc9373b3b0bc56194a3433ecf2f00fa601e315bbda093e911778d",
+    "changes": [
+      "Configured root for research working directory; legacy LIHTC/LODES locations are under legacy_inputs/ and require input setup."
+    ],
+    "published_sha256": "9543eded6bcba996cc1aae21aec48a1860d7b43d3e67ddc69b8086a5154a46ae"
+  },
+  {
+    "file": "research/code/02_clean_cps.R",
+    "original_relative_path": "code/02_clean_cps.R",
+    "source_sha256": "6d278d68100eec9f08590340aca9065e6e2e456e06c671eebbe943d85bf42cb4",
+    "changes": [
+      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
+    ],
+    "published_sha256": "a7cf3f970e0b05c62139ef7c76a1f1e0e0f1254c32e909527edaf0949cca68c1"
+  },
+  {
+    "file": "research/code/13_wage_control_heterogeneity.R",
+    "original_relative_path": "code/13_wage_control_heterogeneity.R",
+    "source_sha256": "8d537527b66a3e812e65ea4f8b18e1eb97ad3d84b8cad445dbeba396b5d8ca11",
+    "changes": [
+      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
+    ],
+    "published_sha256": "646b00a3329e6f82e6baf769a203dc6ba7a67b89e488196e16027e134388f4d5"
+  },
+  {
+    "file": "research/code/24_main_regressions.R",
+    "original_relative_path": "code/24_main_regressions.R",
+    "source_sha256": "9a224b9a86b7e0133eb2cd436bd8530d2a886896266e519bacd02e94909e66a1",
+    "changes": [
+      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
+    ],
+    "published_sha256": "a669ee65f5b4bcc8a58467638c4fbfef5e296253c9e394587a941595025803a7"
+  },
+  {
+    "file": "research/code/25_survivor_robustness.R",
+    "original_relative_path": "code/25_survivor_robustness.R",
+    "source_sha256": "49b608b15d62af0c207a17385276f2ddd59e7454bbf0c98d111052ea152d99a3",
+    "changes": [
+      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
+    ],
+    "published_sha256": "2f2da13e0697f2eff7d3b5a035f54277527ef5756576513231864434d4cf4616"
+  },
+  {
+    "file": "research/code/26_ai_horserace.R",
+    "original_relative_path": "code/26_ai_horserace.R",
+    "source_sha256": "49faff8beead581c5343f979f86f2949dfb395ef40bd67c5183a5365f131c668",
+    "changes": [
+      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
+    ],
+    "published_sha256": "e6ada7b3d5fdac2d9d28dcaa6b0c74aa03d194e0e4ed69c688ee8c2158d4ba3e"
+  }
+]

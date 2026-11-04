@@ -14,20 +14,9 @@ Place the following source files in `RAW_DIR`. Links checked November 4, 2026; r
 
 For the full household analysis, use [IPUMS CPS](https://cps.ipums.org/cps/) to register/sign in and request basic monthly samples from January 2015 through May 2026, matching the supplied slides. Download the extract with its codebook and import syntax. The selected occupation-score script does **not** read CPS microdata; CPS preparation and estimation are separate stages not yet included here. The exact variable manifest should be exported from the original project before providing a reproducible extract recipe.
 
-## Completeness review
+## Included research code
 
-| Stage | Included? | What is still needed |
-| --- | --- | --- |
-| Occupational exposure/crosswalk integration | Yes | Five source files above; date/version manifest |
-| Coverage and unmatched occupation diagnostics | Yes | Review actual coverage before applying scores to CPS |
-| CPS import, spouse linkage, sample restrictions, outcomes/weights | No | Port and validate the original `02_clean_cps.R` and extract specification |
-| Exposure thresholds, household regressions, event studies, robustness figures | No | Select the specification corresponding to the September 2026 slides and include its dependencies |
-
-The local project contains both `24_main_regressions.R` and `29_main_regressions_common_q3.R`. They use different threshold constructions; they should not be mixed into one claimed replication of the slides. Additional wage-trend inputs also need their generating scripts.
-
-The crosswalk sample ran successfully on the existing inputs. That validates execution of this component, not the household findings. BLS employment weights are optional in the current script, which falls back to equal weights if the file is absent; to match the employment-weighted description, provide the BLS file and inspect the log. External downloads are not version-pinned, and the code does not yet fail on an explicitly defined minimum match-coverage threshold.
-
-This work in progress studies whether occupational exposure to generative AI is associated with labor supply adjustments within couples. It combines occupational measures with CPS household data. Exposure measures potential task overlap with AI, not observed adoption or an individual job-loss event.
+The repository now includes data-construction and main-analysis source in `research/`, in addition to the focused utilities described below. See [Research workflow](RESEARCH_WORKFLOW.md) for the file-by-file roles, execution order, and unresolved input handoffs. The earlier selection-only completeness inventory has been superseded by that workflow; full numerical replication has not been certified.
 
 ## Featured code: occupation harmonization
 
