@@ -1,9 +1,5 @@
-# Validation and scope
+# Validation and remaining issues
 
-The selected code was checked on November 4, 2026. These repositories contain selected research code, not complete replication packages. No raw microdata are included. Figures reproduce the supplied paper or slides and are not outputs of the synthetic demonstrations.
+Consolidation checks, November 4, 2026: 7 R files, 0 Python files, 0 notebooks (0 code cells), and 1 shell entrypoints passed syntax checks. Notebook outputs and execution counts were cleared. Source hashes and adapted-file hashes are in SOURCE_MANIFEST.json.
 
-The R script parsed and ran against the original source inputs, writing to a separate temporary directory. Household regressions were not rerun.
-
-## Expanded research source checks (November 4, 2026)
-
-Parsed 6 R files and 0 Python files; checked 0 notebooks containing 0 code cells. No syntax errors were reported. Notebook outputs and execution counts are cleared. These checks do not execute the analyses, validate package availability, or reproduce numerical estimates. See RESEARCH_WORKFLOW.md for unresolved handoffs.
+The advisor slide LaTeX directly references scripts 24, 25, 26 and the earnings first-stage section of script 18. The shared code retains that specification and excludes the later common-Q3 alternatives. Full CPS preparation and regressions were not rerun. Syntax validation does not establish package compatibility or numerical reproduction.

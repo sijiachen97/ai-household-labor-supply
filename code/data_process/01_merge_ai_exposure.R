@@ -23,7 +23,7 @@
 #   output/tables/01_merge_coverage.csv     — match-rate diagnostics
 #
 # REQUIREMENTS:
-#   install.packages(c("tidyverse", "readxl"))
+#   install.packages(c("tidyverse", "readxl", "here"))
 # ============================================================
 
 rm(list = ls())
@@ -32,8 +32,8 @@ library(tidyverse)
 library(readxl)
 
 # ── Paths ────────────────────────────────────────────────────
-PROJECT_ROOT <- Sys.getenv("PROJECT_ROOT", unset = getwd())
-RAW_DIR      <- Sys.getenv("RAW_DIR", unset = file.path(PROJECT_ROOT, "data", "raw"))
+PROJECT_ROOT <- normalizePath(Sys.getenv("PROJECT_ROOT", unset = "."), mustWork = TRUE)
+RAW_DIR      <- file.path(PROJECT_ROOT, "data", "raw")
 PROC_DIR     <- file.path(PROJECT_ROOT, "data", "processed")
 TABLE_DIR    <- file.path(PROJECT_ROOT, "output", "data_prep", "tables")
 
@@ -592,6 +592,6 @@ with(occ_exposure %>% filter(!is.na(genai_total), !is.na(wfh)),
 
 cat("\n", strrep("=", 60), "\n")
 cat("MERGE COMPLETE\n")
-cat("Next: source('code/02_clean_cps.R') then merge occ_ai_exposure\n")
+cat("Next: source('code/data_process/02_clean_cps.R') then merge occ_ai_exposure\n")
 cat("      by c('OCC2010' = 'occ2010')\n")
 cat(strrep("=", 60), "\n")

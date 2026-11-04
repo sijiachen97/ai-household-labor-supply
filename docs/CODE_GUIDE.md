@@ -1,8 +1,42 @@
-# Occupational AI exposure and household labor supply
+# AI and household labor supply: code guide
+
+All executable research code is under `code/`. `code/data_process/` constructs inputs; `code/analysis/` estimates models and produces tables/figures. Run commands from the repository root. The original research folders are unchanged.
+
+The code is selected against the supplied final paper/slides and their production dependencies, rather than copied as an archive of every experiment. [Source manifest](SOURCE_MANIFEST.json) records original filenames, selected notebook cells, hashes and adaptations. [Source review](SOURCE_REVIEW.json) lists the reviewed source inventory and inclusion/exclusion decisions. No microdata, model caches or saved notebook outputs are shared.
+
+## Final slides and run order
+
+Reference: `doc/presentation_advisor/advisor_slides.tex` and the supplied `AI_labor_slides.pdf`. The slide source directly includes figures from scripts 24, 25, 26 and the first-stage section of 18. The later common-Q3 scripts 29–34 are excluded because they do not generate this version of the slides.
+
+| Order | Included file | Role / final output |
+| --- | --- | --- |
+| 1 | `code/data_process/01_merge_ai_exposure.R` | Occupation crosswalk, exposure and teleworkability lookup |
+| 2 | `code/data_process/02_clean_cps.R` | CPS cleaning, spouse links and couples sample |
+| 3 | `code/data_process/03_build_occupation_wages.R` | Production wage-lookup block extracted from original script 13; excludes its earlier exploratory models |
+| 4 | `code/analysis/24_main_regressions.R` | Main own/spouse results, M1–M5 and event studies, including `24_B_es_WtoH_tele1.pdf` |
+| 5 | `code/analysis/25_survivor_robustness.R` | Leave-one-occupation-out and teacher exclusions used in the slides |
+| 6 | `code/analysis/26_ai_horserace.R` | Teleworkability/AI joint comparison, `26_horserace.pdf` |
+| 7 | `code/analysis/18_earnings_first_stage.R` | Original first-stage section generating the slides' backup `18_firststage_A.pdf`; later exploratory models omitted |
+
+After preparing the raw inputs:
+
+```sh
+bash code/run_analysis.sh
+```
+
+The full analysis uses repeated cross-sections of married couples, not a longitudinal household panel. Raw inputs belong in `data/raw/`, processed data in `data/processed/`, and results in `output/`. The code expects the paired IPUMS files `cps_00004.xml` and `cps_00004.dat.gz`. If your account gives a different extract number, update both paths together.
+
+## CPS extract recipe
+
+Request basic monthly samples for January 2015–May 2026 from IPUMS CPS. Use the variable names listed below, taken from `KEEP_VARS` in the original cleaning script. Download the DDI XML and corresponding data file together. Some variables are available only for subsets of months or respondents; the code handles the intended universes.
+
+`YEAR`, `MONTH`, `SERIAL`, `CPSID`, `CPSIDP`, `CPSIDV`, `PERNUM`, `SPLOC`, `SPRULE`, `MISH`, `ASECFLAG`, `EMPSTAT`, `LABFORCE`, `OCC2010`, `IND1990`, `CLASSWKR`, `UHRSWORKT`, `UHRSWORK1`, `WKSTAT`, `DURUNEMP`, `TELWRKPAY`, `TELWRKHR`, `TELWRKBFCVD`, `TELWRKDIFFCVD`, `QTELWRKPAY`, `QTELWRKHR`, `QTELWRKBFCVD`, `QTELWRKDIFFCVD`, `EARNWEEK`, `EARNWEEK2`, `HOURWAGE2`, `PAIDHOUR`, `ELIGORG`, `AGE`, `SEX`, `RACE`, `HISPAN`, `EDUC`, `MARST`, `NCHILD`, `NCHLT5`, `RELATE`, `STATEFIP`, `METAREA`, `CBSASZ`, `COUNTY`, `WTFINL`, `EARNWT`
+
+Source: [IPUMS CPS](https://cps.ipums.org/cps/). Registration and an authorized extract are required.
+
+The main scripts contain the original threshold and sample definitions. A newer exposure threshold or extraction vintage can change estimates and should not be silently substituted. All scripts were syntax-checked, but full CPS cleaning and regression estimation were not rerun here.
 
 ## Source data: where to download
-
-Place the following source files in `RAW_DIR`. Links checked November 4, 2026; retain original filenames and record download dates and release/commit identifiers.
 
 | Expected input | Source and instructions |
 | --- | --- |
@@ -12,34 +46,8 @@ Place the following source files in `RAW_DIR`. Links checked November 4, 2026; r
 | `AIOE_DataAppendix.xlsx` | [Felten–Raj–Seamans AIOE repository](https://github.com/AIOE-Data/AIOE). Download the workbook; the code reads `Appendix A`. |
 | `national_M2018_dl.xlsx` | [BLS May 2018 national OES archive](https://www.bls.gov/oes/special.requests/oesm18nat.zip). Extract the national workbook. This supplies employment weights. |
 
-For the full household analysis, use [IPUMS CPS](https://cps.ipums.org/cps/) to register/sign in and request basic monthly samples from January 2015 through May 2026, matching the supplied slides. Download the extract with its codebook and import syntax. The selected occupation-score script does **not** read CPS microdata; CPS preparation and estimation are separate stages not yet included here. The exact variable manifest should be exported from the original project before providing a reproducible extract recipe.
+## Software
 
-## Included research code
+R packages referenced: `data.table`, `fixest`, `ipumsr`, `readxl`, `tidyverse`.
 
-The repository now includes data-construction and main-analysis source in `research/`, in addition to the focused utilities described below. See [Research workflow](RESEARCH_WORKFLOW.md) for the file-by-file roles, execution order, and unresolved input handoffs. The earlier selection-only completeness inventory has been superseded by that workflow; full numerical replication has not been certified.
-
-## Featured code: occupation harmonization
-
-`build_occupation_exposure.R` creates an OCC2010-keyed exposure file for merging into CPS records. It normalizes SOC codes, handles exact, grouped and wildcard crosswalk entries, integrates generative AI exposure and teleworkability, and exports coverage diagnostics. Where available, BLS employment counts weight aggregation across occupations; the script includes an equal-weight fallback when that input is absent.
-
-## Run
-
-```r
-install.packages(c("tidyverse", "readxl"))
-```
-
-```sh
-PROJECT_ROOT=/path/to/project RAW_DIR=/path/to/source-files Rscript code/build_occupation_exposure.R
-```
-
-Required source filenames (not distributed here):
-
-| Input | Purpose |
-| --- | --- |
-| `2010-occ-codes-with-crosswalk-from-2002-2011.xls` | Census OCC2010–SOC crosswalk, `2010summ` sheet |
-| `genaiexp_estz_occscores.csv` | Eisfeldt–Schubert–Taska–Zhang generative AI exposure |
-| `onet_teleworkable_blscodes.csv` | Occupational teleworkability |
-| `AIOE_DataAppendix.xlsx` | Alternative AI occupational exposure, Appendix A |
-| `national_M2018_dl.xlsx` | BLS employment weights; recommended |
-
-Outputs are written to `data/processed/` and `output/data_prep/tables/` below `PROJECT_ROOT`. Review match coverage and unmatched codes before merging scores into individual data. The research's household regressions and CPS microdata are not included in this selected sample.
+Dependencies are not a fully pinned environment. See [Validation](VALIDATION.md) for what was and was not executed.

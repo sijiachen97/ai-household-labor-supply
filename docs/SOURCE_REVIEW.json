@@ -1,0 +1,236 @@
+[
+  {
+    "source": "code/08_joint_bins.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "217e5338d7e126fdc27f84effc8350fff255904572d2d358631e58829553115c"
+  },
+  {
+    "source": "code/26_ai_horserace.R",
+    "status": "selected",
+    "reason": "Direct figure/result references in doc/presentation_advisor/advisor_slides.tex.",
+    "sha256": "49faff8beead581c5343f979f86f2949dfb395ef40bd67c5183a5365f131c668"
+  },
+  {
+    "source": "code/12_tercile_design.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "2ab051b52310dc27a7bd7c5fd3df3ae88b3e1510bd9a9fa4b4b39ce46735fba6"
+  },
+  {
+    "source": "code/02_clean_cps.R",
+    "status": "selected",
+    "reason": "Upstream occupation merge and CPS couples data used by script 24.",
+    "sha256": "6d278d68100eec9f08590340aca9065e6e2e456e06c671eebbe943d85bf42cb4"
+  },
+  {
+    "source": "code/22_cycle_adjusted.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "b71d0c818579e62057f8c7d29c4ed14c57bc5f1ff6cca01b1f408ba4bb11084a"
+  },
+  {
+    "source": "code/19_earnings.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "f3d97e5cbcb97e8d85330d06f870a76238e752a5ed729bbb561f18ee7810fb43"
+  },
+  {
+    "source": "code/33_all_subsets_common_q3.py",
+    "status": "excluded",
+    "reason": "Later common-Q3 alternative; not the supplied slides specification.",
+    "sha256": "1dc4f9b7769919b95713725459d9fd4b4e799d63492833122dde3616e1a80c9a"
+  },
+  {
+    "source": "code/24_main_regressions.R",
+    "status": "selected",
+    "reason": "Direct figure/result references in doc/presentation_advisor/advisor_slides.tex.",
+    "sha256": "9a224b9a86b7e0133eb2cd436bd8530d2a886896266e519bacd02e94909e66a1"
+  },
+  {
+    "source": "code/05_fe_specs.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "4eb508cc32bd068aa2cf76c2eaf9046d1f97614f39c2f3770f42e0fa6bbc0762"
+  },
+  {
+    "source": "code/32_common_q3_slide_comparison.py",
+    "status": "excluded",
+    "reason": "Later common-Q3 alternative; not the supplied slides specification.",
+    "sha256": "58b6652c3712432694c94c3e59e22f7f0fcd0569d9b32dbc97244ee746de7dc3"
+  },
+  {
+    "source": "code/25_survivor_robustness.R",
+    "status": "selected",
+    "reason": "Direct figure/result references in doc/presentation_advisor/advisor_slides.tex.",
+    "sha256": "49b608b15d62af0c207a17385276f2ddd59e7454bbf0c98d111052ea152d99a3"
+  },
+  {
+    "source": "code/13_wage_control_heterogeneity.R",
+    "status": "selected",
+    "reason": "The main specifications read the 13_occ_wage.csv output; obsolete heterogeneity models omitted.",
+    "sha256": "8d537527b66a3e812e65ea4f8b18e1eb97ad3d84b8cad445dbeba396b5d8ca11"
+  },
+  {
+    "source": "code/build_pooled_cutpoint_workbook.mjs",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "00ca2d15207ba3e96793406d84b21d6038b5b47c8cd92324b50dddd347d6ac3d"
+  },
+  {
+    "source": "code/17_boundary_diagnosis.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "4ca1206569324e14fdaf84977a8d4e09ad3ccc461205a0e8fac7b15a358ac64c"
+  },
+  {
+    "source": "code/14_actual_telework.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "d1b51cc17c5c943399de4e412915163f800a5515fae49494e50f1523e7b1592a"
+  },
+  {
+    "source": "code/16_child_mechanism.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "2432eed81e93f28c3ce4302158f2c17980322a262314e77dab71ed5516d34ba7"
+  },
+  {
+    "source": "code/10_binary_design.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "35a2272cfc62eac4de69a25c2f7a23ed9bbce84896a2fca6639ddc0f28f6863a"
+  },
+  {
+    "source": "code/03_event_study_twfe.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "38ff9a3f6b628caa42761143ae4042b72a03573bc1261991cbdb81458c69459a"
+  },
+  {
+    "source": "code/06_wfh_channel.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "6599065e1f28bfc606d090c532a0a60851d7d9bcb7cd2e411bf103e1098422e5"
+  },
+  {
+    "source": "code/build_cutpoint_workbook.mjs",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "8483ebe68de8735c0c3e73fb210feef34bd0c35f2b5f55dffa5bdd2d7e5b9022"
+  },
+  {
+    "source": "code/15_decisive_test.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "0dc6a2f60b2c161fa7d8b22b048f29aa2e57845973cc5b0b6448bf27eae2aa7b"
+  },
+  {
+    "source": "code/29_main_regressions_common_q3.R",
+    "status": "excluded",
+    "reason": "Later common-Q3 alternative; not the supplied slides specification.",
+    "sha256": "f855fb92bf65b536230595d4edf5afdf3d27631123346b067d564286c4bc76db"
+  },
+  {
+    "source": "code/07_htow_disentangle.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "e3d32a0390d353ac81e6432f609d2cd71fbe6eafc1c56cd18183fec6429ade67"
+  },
+  {
+    "source": "code/34_format_common_q3_tabs.py",
+    "status": "excluded",
+    "reason": "Later common-Q3 alternative; not the supplied slides specification.",
+    "sha256": "75e650c125e380c198adf78917d3a7ee288c7cc4cd557f6e300295b1ff6e4cb6"
+  },
+  {
+    "source": "code/28_pooled_cutpoint_composition.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "3cc38b4db7922af4855293a1b6fd4e6dba26d82a755e51c5204c19f9147c7aa8"
+  },
+  {
+    "source": "code/30_survivor_robustness_common_q3.R",
+    "status": "excluded",
+    "reason": "Later common-Q3 alternative; not the supplied slides specification.",
+    "sha256": "4e65b70ff4febf2c04742bccfe8f0f4497e0770702ae239125fe313bf4ed0663"
+  },
+  {
+    "source": "code/20_descriptive_trends.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "7dc776c47f0085e53749cad17cc5e744efab11c2a4c6cac4483292481be8b20d"
+  },
+  {
+    "source": "code/04_own_exposure_diagnostics.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "473ab039630a9f609acb6eee02059e4d7d6ad5c87a6ee96ca3d675f145ebc403"
+  },
+  {
+    "source": "code/21_expansion_consolidation.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "2cbcef5791d2119a79c82974492868f03ad1af03074529149f45124d5d525eba"
+  },
+  {
+    "source": "code/31_ai_horserace_common_q3.R",
+    "status": "excluded",
+    "reason": "Later common-Q3 alternative; not the supplied slides specification.",
+    "sha256": "6616005e5a73f3e9448bdc344b249584e65d698b11a26749475005ff85120f6f"
+  },
+  {
+    "source": "code/03_event_study.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "a42f2391c5cd39ee66c88b0b54ec09873ea94bd0b1945bb9b8613893e890d899"
+  },
+  {
+    "source": "code/99_conformance_checks.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "4df01252d239096951adfcff3fb4903784de471369fca7945b3727822dcffe14"
+  },
+  {
+    "source": "code/00_data_quality.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "21d4a9becbdfea7d95470fa29e77e8f2b73638ad73333bda74dc3edf42eeeda8"
+  },
+  {
+    "source": "code/09_decomposition.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "a558a2951411873c637ddc0d44f48cf8276b12e6c7da1b99de67e40d3f0f5932"
+  },
+  {
+    "source": "code/01_merge_ai_exposure.R",
+    "status": "selected",
+    "reason": "Upstream occupation merge and CPS couples data used by script 24.",
+    "sha256": "1caa3076b39bc9373b3b0bc56194a3433ecf2f00fa601e315bbda093e911778d"
+  },
+  {
+    "source": "code/18_ai_winners.R",
+    "status": "selected",
+    "reason": "Slides backup figure 18_firststage_A.pdf.",
+    "sha256": "c12bb5c850b2725c6e23a16b129d241499920f218e9d4f9bc35619669aa8170a"
+  },
+  {
+    "source": "code/27_cutpoint_composition.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "97dcdf2a0e3503c71d367eed2ce8f44f3a58ec1c422dab506a5f8977d8bae121"
+  },
+  {
+    "source": "code/23_within_subset_adjusted.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "1a291bd996875703504eb29cbf9b2b88bc223f95ab2961dcf695f269eccdee34"
+  },
+  {
+    "source": "code/11_felten_check.R",
+    "status": "excluded",
+    "reason": "Exploratory, superseded, or not on the verified final output/dependency path; excluded from the shareable main code.",
+    "sha256": "bed641aa08fa2626143507ffcf6080191768687972db0cd6f365729d16cd1334"
+  }
+]

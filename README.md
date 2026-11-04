@@ -33,19 +33,12 @@ The red estimates remove the teaching-occupation group; the other colored estima
 
 ## Code and reproducibility
 
-The [code guide](docs/CODE_GUIDE.md) documents the R pipeline that harmonizes SOC and Census occupation codes, integrates AI exposure and teleworkability, and exports coverage diagnostics. The expanded `research/` directory additionally contains CPS sample construction, main regressions and household-response figures; see the research workflow below.
+All code is organized in one directory:
 
-```r
-install.packages(c("tidyverse", "readxl"))
+```text
+code/
+  data_process/   # source-data cleaning and analysis-data construction
+  analysis/       # final specifications, robustness checks, tables and figures
 ```
 
-```sh
-PROJECT_ROOT=/path/to/project RAW_DIR=/path/to/source-files Rscript code/build_occupation_exposure.R
-```
-
-[Validation](docs/VALIDATION.md) · [Sources and code provenance](docs/SOURCES.md)
-
-## Research code: data construction through estimation
-
-The [`research/`](research/) directory includes the original data-preparation and main-analysis code, with notebook outputs removed. Start with the [research workflow](docs/RESEARCH_WORKFLOW.md) for the analysis sequence and remaining replication gaps; [CODE_GUIDE](docs/CODE_GUIDE.md) lists data download sources. [Source manifest](docs/SOURCE_MANIFEST.json) documents provenance and adaptations.
-
+Start with the [code guide](docs/CODE_GUIDE.md) for the run order, source-data downloads and the mapping to the final paper/slides. [Validation](docs/VALIDATION.md) distinguishes executed checks from unresolved replication steps. [Source manifest](docs/SOURCE_MANIFEST.json) records original files and selected notebook cells.

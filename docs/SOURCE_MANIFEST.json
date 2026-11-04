@@ -1,56 +1,94 @@
 [
   {
-    "file": "research/code/01_merge_ai_exposure.R",
+    "file": "code/data_process/01_merge_ai_exposure.R",
     "original_relative_path": "code/01_merge_ai_exposure.R",
     "source_sha256": "1caa3076b39bc9373b3b0bc56194a3433ecf2f00fa601e315bbda093e911778d",
+    "published_sha256": "f714f88d9d664163177cdc46490d28246126c1221de43bf30b1fc8f5279e1557",
+    "original_cell_indices": null,
+    "evidence": "Upstream occupation merge and CPS couples data used by script 24.",
     "changes": [
-      "Configured root for research working directory; legacy LIHTC/LODES locations are under legacy_inputs/ and require input setup."
-    ],
-    "published_sha256": "9543eded6bcba996cc1aae21aec48a1860d7b43d3e67ddc69b8086a5154a46ae"
+      "Project root is repository working directory; statistical specifications retained.",
+      "Consolidated under code/data_process or code/analysis; updated source paths and notebook root setup."
+    ]
   },
   {
-    "file": "research/code/02_clean_cps.R",
+    "file": "code/data_process/02_clean_cps.R",
     "original_relative_path": "code/02_clean_cps.R",
     "source_sha256": "6d278d68100eec9f08590340aca9065e6e2e456e06c671eebbe943d85bf42cb4",
+    "published_sha256": "a7cf3f970e0b05c62139ef7c76a1f1e0e0f1254c32e909527edaf0949cca68c1",
+    "original_cell_indices": null,
+    "evidence": "Upstream occupation merge and CPS couples data used by script 24.",
     "changes": [
-      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
-    ],
-    "published_sha256": "a7cf3f970e0b05c62139ef7c76a1f1e0e0f1254c32e909527edaf0949cca68c1"
+      "Project root is repository working directory; statistical specifications retained.",
+      "Consolidated under code/data_process or code/analysis; updated source paths and notebook root setup."
+    ]
   },
   {
-    "file": "research/code/13_wage_control_heterogeneity.R",
+    "file": "code/data_process/03_build_occupation_wages.R",
     "original_relative_path": "code/13_wage_control_heterogeneity.R",
     "source_sha256": "8d537527b66a3e812e65ea4f8b18e1eb97ad3d84b8cad445dbeba396b5d8ca11",
+    "published_sha256": "2f7248ba9ea6833a00ed5f68e9db00b03ccacc5245bdebfeb59ee24cb5d31c79",
+    "original_cell_indices": null,
+    "evidence": "The main specifications read the 13_occ_wage.csv output; obsolete heterogeneity models omitted.",
     "changes": [
-      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
-    ],
-    "published_sha256": "646b00a3329e6f82e6baf769a203dc6ba7a67b89e488196e16027e134388f4d5"
+      "Selected production block / path adaptations; see workflow.",
+      "Project root is repository working directory; statistical specifications retained.",
+      "Consolidated under code/data_process or code/analysis; updated source paths and notebook root setup."
+    ]
   },
   {
-    "file": "research/code/24_main_regressions.R",
+    "file": "code/analysis/24_main_regressions.R",
     "original_relative_path": "code/24_main_regressions.R",
     "source_sha256": "9a224b9a86b7e0133eb2cd436bd8530d2a886896266e519bacd02e94909e66a1",
+    "published_sha256": "a669ee65f5b4bcc8a58467638c4fbfef5e296253c9e394587a941595025803a7",
+    "original_cell_indices": null,
+    "evidence": "Direct figure/result references in doc/presentation_advisor/advisor_slides.tex.",
     "changes": [
-      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
-    ],
-    "published_sha256": "a669ee65f5b4bcc8a58467638c4fbfef5e296253c9e394587a941595025803a7"
+      "Project root is repository working directory; statistical specifications retained.",
+      "Consolidated under code/data_process or code/analysis; updated source paths and notebook root setup."
+    ]
   },
   {
-    "file": "research/code/25_survivor_robustness.R",
+    "file": "code/analysis/25_survivor_robustness.R",
     "original_relative_path": "code/25_survivor_robustness.R",
     "source_sha256": "49b608b15d62af0c207a17385276f2ddd59e7454bbf0c98d111052ea152d99a3",
+    "published_sha256": "2f2da13e0697f2eff7d3b5a035f54277527ef5756576513231864434d4cf4616",
+    "original_cell_indices": null,
+    "evidence": "Direct figure/result references in doc/presentation_advisor/advisor_slides.tex.",
     "changes": [
-      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
-    ],
-    "published_sha256": "2f2da13e0697f2eff7d3b5a035f54277527ef5756576513231864434d4cf4616"
+      "Project root is repository working directory; statistical specifications retained.",
+      "Consolidated under code/data_process or code/analysis; updated source paths and notebook root setup."
+    ]
   },
   {
-    "file": "research/code/26_ai_horserace.R",
+    "file": "code/analysis/26_ai_horserace.R",
     "original_relative_path": "code/26_ai_horserace.R",
     "source_sha256": "49faff8beead581c5343f979f86f2949dfb395ef40bd67c5183a5365f131c668",
+    "published_sha256": "e6ada7b3d5fdac2d9d28dcaa6b0c74aa03d194e0e4ed69c688ee8c2158d4ba3e",
+    "original_cell_indices": null,
+    "evidence": "Direct figure/result references in doc/presentation_advisor/advisor_slides.tex.",
     "changes": [
-      "Replaced original project-root paths with working-directory-relative paths. Run from research/. Legacy external input paths still require configuration."
-    ],
-    "published_sha256": "e6ada7b3d5fdac2d9d28dcaa6b0c74aa03d194e0e4ed69c688ee8c2158d4ba3e"
+      "Project root is repository working directory; statistical specifications retained.",
+      "Consolidated under code/data_process or code/analysis; updated source paths and notebook root setup."
+    ]
+  },
+  {
+    "file": "code/analysis/18_earnings_first_stage.R",
+    "original_relative_path": "code/18_ai_winners.R",
+    "source_sha256": "c12bb5c850b2725c6e23a16b129d241499920f218e9d4f9bc35619669aa8170a",
+    "published_sha256": "cd3c17e3f4db760bb6adad2945b352fe34833c8f4fd3805523d7679188c12f2f",
+    "original_cell_indices": null,
+    "evidence": "Slides backup figure 18_firststage_A.pdf.",
+    "changes": [
+      "Selected production block / path adaptations; see workflow.",
+      "Project root is repository working directory; statistical specifications retained.",
+      "Consolidated under code/data_process or code/analysis; updated source paths and notebook root setup."
+    ]
+  },
+  {
+    "file": "code/run_analysis.sh",
+    "original_relative_path": null,
+    "evidence": "New execution wrapper derived from the selected production script order.",
+    "published_sha256": "2550bfc8a02273cfdda3580bc31124f89b5e95f71e097d9220a7d86c15844bcd"
   }
 ]
